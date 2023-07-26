@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '/home/akhilesh/Desktop/PG_Program/Digital_eRupee/eRupee/frontend/src/App.css';
+import '/Users/aniketalok/Desktop/AFSD/week1/frontend/src/App.css';
 
 const UserForm = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const UserForm = () => {
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       try {
-        const response = await axios.post('http://localhost:5000/api/register', formData);
+        const response = await axios.post('http://localhost:5001/api/register', formData);
         console.log('User registered:', response.data);
         // Reset form data after successful submission (optional)
         setFormData({
